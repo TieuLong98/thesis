@@ -1,0 +1,42 @@
+<div class="home">
+  <div class="container">
+    <div class="general-info">
+      <div class="item">
+        <div class="item-content">
+          <div class="title">User</div>
+          <div class="text">80,000</div>
+        </div>
+        <fa-icon [icon]="['fas', 'users']" size="lg"></fa-icon>
+      </div>
+      <div class="item">
+        <div class="item-content">
+          <div class="title">Device</div>
+          <div class="text">5,000</div>
+        </div>
+        <fa-icon [icon]="['fas', 'microchip']" size="lg"></fa-icon>
+      </div>
+      <div class="item">
+        <div class="item-content">
+          <div class="title">Room</div>
+          <div class="text">1,000</div>
+        </div>
+        <fa-icon [icon]="['fas', 'home']" size="lg"></fa-icon>
+      </div>
+    </div>
+    <div class="chart-info entry-bar">
+      <div class="chart-info__item entry-bar">
+        <div class="title">
+          <span >Entries</span>
+          <p-dropdown [options]="years" [(ngModel)]="selectedYear" placeholder="Select year" optionLabel="name"></p-dropdown>
+        </div>
+        <p-chart type="bar" [data]="barData" height="300px"></p-chart>
+      </div>
+      <div class="chart-info__item device-pie">
+        <div class="title">
+          <span >Device Category</span>
+        </div>
+        <p-chart type="pie" [data]="pieData" [options]="chartOptions"></p-chart>
+      </div>
+    </div>
+  </div>
+</div>

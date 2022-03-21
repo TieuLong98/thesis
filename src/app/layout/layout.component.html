@@ -1,0 +1,105 @@
+<div class="sidebar" [ngClass]="collapseSidebar === true ? 'close' : ''">
+  <div class="logo-details" routerLink="/home">
+    <fa-icon [icon]="['fas', 'fingerprint']"></fa-icon>
+    <span class="logo_name">Access Control</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/dashboard">
+        <fa-icon [icon]="['fas', 'building']"></fa-icon>
+        <span class="link_name">Dashboard</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" routerLink="/dashboard">Dashboard</a></li>
+      </ul>
+    </li>
+    <li>
+      <div class="iocn-link">
+        <a routerLink="/users">
+          <fa-icon [icon]="['fas', 'users']"></fa-icon>
+          <span class="link_name">User</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" routerLink="/users">User</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="iocn-link">
+        <a routerLink="/rooms">
+          <fa-icon [icon]="['fas', 'home']"></fa-icon>
+          <span class="link_name">Room</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" routerLink="/rooms">Room</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a routerLink="/devices">
+        <fa-icon [icon]="['fas', 'microchip']"></fa-icon>
+        <span class="link_name">Devices</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" routerLink="/devices">Devices</a></li>
+      </ul>
+    </li>
+    <li>
+      <a routerLink="/statistics">
+        <fa-icon [icon]="['fas', 'chart-line']"></fa-icon>
+        <span class="link_name">Statistics</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" routerLink="/statistics">Statistics</a></li>
+      </ul>
+    </li>
+    <!-- <li>
+      <div class="iocn-link">
+        <a href="#">
+          <fa-icon [icon]="['fas', 'building']"></fa-icon>
+          <span class="link_name">Plugins</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="#">
+        <fa-icon [icon]="['fas', 'building']"></fa-icon>
+        <span class="link_name">Explore</span>
+      </a>
+    </li> -->
+  </ul>
+</div>
+
+<section class="home-section">
+  <div class="home-content">
+    <div class="left-header">
+      <div class="collapse-menu">
+        <fa-icon [icon]="['fas', 'bars']" size="2x" (click)="collapseMenu()"></fa-icon>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class = "profile" routerLink="/profile">
+          <fa-icon [icon]="['far', 'user']" size="2x"></fa-icon>
+          <div class="detail">
+            <span style="font-weight: bold;">YaCoKu</span>
+            <span>long2221998@email.com</span>
+          </div>
+      </div>
+   
+      <div class="setting">
+          <ul class="icon">
+            <fa-icon [icon]="['fas', 'gear']" size="2x"></fa-icon>
+          </ul>
+          <ul class="root">
+            <li><a href="">Option1</a></li>
+            <li><a href="">Option2</a></li>
+            <li><a href="">Option3</a></li>
+            <li><a href="">Option4</a></li>
+            <li><a href=""></a></li>
+            <li><a href="">Logout</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+    <router-outlet></router-outlet>
+</section>
